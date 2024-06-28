@@ -1,0 +1,54 @@
+fieldset{
+    border: 1px solid #999999;
+    border-radius: 10px;
+    padding: 30px;
+}
+.contenedor{
+    max-width: 90%;
+    margin: 30px auto 0;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.campo label{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.opciones-campo-sexo label{
+    text-transform: capitalize;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.campo input{
+    padding: 5px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #E3E3E3;
+}
+
+.display-boton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="submit"]{
+    display: block;
+    padding: 5px 30px;
+    border: 0;
+    background-color: blue;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #000746;
+}

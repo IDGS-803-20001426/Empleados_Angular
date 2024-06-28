@@ -1,0 +1,36 @@
+<div class="contenedor">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <ng-container *ngIf="empleados.length > 0; else noEmpleados">
+                <tr *ngFor="let empleado of empleados; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ empleado.nombre }}</td>
+                  <td>{{ empleado.correo }}</td>
+                  <td>{{ empleado.telefono }}</td>
+                  <td>{{ empleado.fechaNacimiento | date:'dd/MM/yyyy' }}</td>
+                  <td>{{ empleado.sexo }}</td>
+                  <td>
+                    <button class="btn btn-danger" (click)="eliminarEmpleado(i)">Eliminar</button>
+                  </td>
+                </tr>
+              </ng-container>
+              <!-- Mensaje para mostrar cuando no hay empleados -->
+              <ng-template #noEmpleados>
+                <tr>
+                  <td colspan="7" style="text-align: center;">No hay empleados registrados.</td>
+                </tr>
+              </ng-template>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,42 @@
+<fieldset class="contenedor">
+    <form (submit)="agregarEmpleado()" >
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" [(ngModel)]="empleadoNuevo.nombre" />
+        </div> 
+        <div class="campo">
+            <label for="correo">Correo:</label>
+            <input type="text" name="correo" id="correo" [(ngModel)]="empleadoNuevo.correo">
+        </div>
+        <div class="campo">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" name="telefono" id="telefono" [(ngModel)]="empleadoNuevo.telefono">
+        </div>
+        <div class="campo">
+            <label for="fechaNacimiento">Fecha Nacimiento:</label>
+            <input type="date" name="fechaNacimiento" id="fechaNacimiento" [(ngModel)]="empleadoNuevo.fechaNacimiento">
+        </div>
+        <div class="campo">
+            <label for="sexo">Sexo:</label>
+            <div class="opciones-campo-sexo">
+                <label>
+                    <input type="radio" name="sexo" value="Masculino" [(ngModel)]="empleadoNuevo.sexo" id="masculino">
+                    Masculino
+                </label>
+                
+                <label>
+                   <input type="radio" name="sexo" value="Femenino" [(ngModel)]="empleadoNuevo.sexo" id="femenino">
+                    Femenino
+                </label>
+            </div>
+        </div>
+        
+        <div class="display-boton">
+            <input class="btn-submit" type="submit" value="Enviar">
+        </div>
+
+        
+    </form>
+
+</fieldset>
+
